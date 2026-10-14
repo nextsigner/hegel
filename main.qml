@@ -25,6 +25,13 @@ Window {
         property color fontColor: 'white'
         property color backgroundColor: 'black'
     }
+    Connections{
+        target: qmlErrorLogger
+        onMessagesChanged:{
+            log.text+=''+qmlErrorLogger.messages[qmlErrorLogger.messages.length-1]+'<br>'
+            xLog.visible=true
+        }
+    }
     Item {
         Unik {
             id: unikObj
