@@ -56,9 +56,9 @@ Window {
             onDownloadFinished: function(success, filePath) {
                 let msg=""
                 if (success) {
-                    let ffn=filePath+'/'+unikObj.FileNameDownloaded
+                    let ffn=filePath//+'/'+unikObj.uFileNameDownloaded
                     unikObj.uFilePathDownloaded=filePath
-                    console.log("¡Archivo descargado en la ruta temporal!: " + filePath);
+                    //console.log("¡Archivo descargado en la ruta temporal!: " + filePath);
                     //txtCentral.text+='\n'+filePath
                     //log.text=filePath
                     log.text+='\nTemp: '+ffn//unikObj.getPath(2)
