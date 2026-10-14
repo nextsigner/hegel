@@ -186,9 +186,9 @@ Window {
                 onPressed: (mouse) => updateVolume(mouse.y)
                 onPositionChanged: (mouse) => updateVolume(mouse.y)
                 onClicked: {
-                    mediaPlayer.source=unikObj.uFilePathDownloaded
+                    mediaPlayer.source='file:/'+unikObj.uFilePathDownloaded
                     mediaPlayer.play()
-                    log.text+='Reproducciendo: '+mediaPlayer.source
+                    log.text+='Reproducciendo: '+(''+mediaPlayer.source).replace(/\//g, '\n\\')
                     xLog.visible=true
                 }
                 onDoubleClicked: {
