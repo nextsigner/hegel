@@ -191,7 +191,7 @@ Window {
 
                 onPressed: (mouse) => updateVolume(mouse.y)
                 onPositionChanged: (mouse) => updateVolume(mouse.y)
-                onDoubleClicked: {
+                /*onDoubleClicked: {
                     let fp=(""+mediaPlayer.source).replace('file:', '')
                     let fe=unikObj.fileExist(fp)
                     let del=false
@@ -202,7 +202,7 @@ Window {
                     //txtCentral.text+='del: '+del+'<br>'
 
 
-                }
+                }*/
             }
         }
 
@@ -610,7 +610,7 @@ Window {
             app.playingFromCache=1
             progressBar.visible=true
             unikObj.uFileNameDownloaded=m0[m0.length-1]
-            mediaPlayerSys.source='file:./sounds/descargando_audio.wav'
+            //mediaPlayerSys.source='file:./sounds/descargando_audio.wav'
             let descargado=unikObj.downloadGitHubZip(item.url, m0[m0.length-1]);
             if(descargado){
                 mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
