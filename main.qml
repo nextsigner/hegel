@@ -185,14 +185,13 @@ Window {
 
                 onPressed: (mouse) => updateVolume(mouse.y)
                 onPositionChanged: (mouse) => updateVolume(mouse.y)
+                onClicked: {
+                    mediaPlayer.source=unikObj.uFilePathDownloaded
+                    mediaPlayer.play()
+                    log.text+='Reproducciendo: '+mediaPlayer.source
+                    xLog.visible=true
+                }
                 onDoubleClicked: {
-                    if(apps.volumeValue===100){
-                        mediaPlayer.source=unikObj.uFilePathDownloaded
-                        mediaPlayer.play()
-                        log.text+='Reproducciendo: '+mediaPlayer.source
-                        xLog.visible=true
-                        return
-                    }
                     let fp=(""+mediaPlayer.source).replace('file:', '')
                     let fe=unikObj.fileExist(fp)
                     let del=false
@@ -567,7 +566,7 @@ Window {
         marc.ms=getHmsToMs(0, 23, 45)
 
         item.marcs=marcs
-        j.items.push(item)        
+        j.items.push(item)
 
         app.json=j
 
