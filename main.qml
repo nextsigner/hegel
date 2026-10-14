@@ -29,6 +29,7 @@ Window {
         Unik {
             id: unikObj
             property string cProject: ''
+            property string uFilePathDownloaded: ''
 
             onDownloadProgress: function(bytesReceived, bytesTotal) {
                 let msg=""
@@ -47,12 +48,14 @@ Window {
             onDownloadFinished: function(success, filePath) {
                 let msg=""
                 if (success) {
+                    unikObj.uFilePathDownloaded=filePath
                     console.log("¡Archivo descargado en la ruta temporal!: " + filePath);
                     //txtCentral.text+='\n'+filePath
                     //log.text=filePath
-                    //log.text+='\nTemp: '+unikObj.getPath(2)
-                    //xLog.visible=true
-                    mediaPlayer.source='file://'+filePath
+                    log.text+='\nTemp: '+unikObj.getPath(2)
+                    xLog.visible=true
+                    //mediaPlayer.source='file://'+filePath
+                    mediaPlayer.source=filePath
                     mediaPlayer.play()
                 } else {
                     msg="Error al descargar el archivo ZIP."
@@ -269,6 +272,13 @@ Window {
                 width: xApp.width
                 height: volumeTrack.height-lvAudios.height-markersList.height-progressContainer.height-progressBar.height-parent.spacing*4
                 anchors.horizontalCenter: parent.horizontalCenter
+                MouseArea{
+                    anchors.fill: parent
+                    onDoubleClicked: {
+                        mediaPlayer.source=unikObj.uFilePathDownloaded
+                        mediaPlayer.play()
+                    }
+                }
                 Text {
                     id: txtCentral
                     text: "" + getMsToString(mediaPlayer.position) + '\n'+getMsToString(mediaPlayer.duration)//+"\nP:"+app.playingFromCache
