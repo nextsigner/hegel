@@ -126,6 +126,20 @@ Window {
                             }
                         }
         }
+        Rectangle{
+            width: app.fs*6
+            height: width
+            anchors.verticalCenter: parent.verticalCenter
+            MouseArea{
+                anchors.fill: parent
+                onClicked: {
+                    mediaPlayer.source='file:/'+unikObj.uFilePathDownloaded
+                    mediaPlayer.play()
+                    log.text+='Reproducciendo: '+(''+mediaPlayer.source).replace(/\//g, '\n\\')
+                    xLog.visible=true
+                }
+            }
+        }
         /*Column {
             spacing: app.fs*2
             anchors.top: parent.top
@@ -571,11 +585,7 @@ Window {
     Shortcut {
         sequence: 'Esc'
         onActivated: {
-            mediaPlayer.source='file:/'+unikObj.uFilePathDownloaded
-            mediaPlayer.play()
-            log.text+='Reproducciendo: '+(''+mediaPlayer.source).replace(/\//g, '\n\\')
-            xLog.visible=true
-            //Qt.quit()
+            Qt.quit()
         }
     }
     function loadDataAudios(){
