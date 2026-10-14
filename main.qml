@@ -179,8 +179,8 @@ Window {
                         del=unikObj.deleteFile(fp)
                         //Qt.quit()
                     }
-                    log.text+='fp: '+fp+'<br>'
-                    log.text+='del: '+del+'<br>'
+                    txtCentral.text+='fp: '+fp+'<br>'
+                    txtCentral.text+='del: '+del+'<br>'
 
 
                 }
