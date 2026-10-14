@@ -185,12 +185,6 @@ Window {
 
                 onPressed: (mouse) => updateVolume(mouse.y)
                 onPositionChanged: (mouse) => updateVolume(mouse.y)
-                onClicked: {
-                    mediaPlayer.source='file:/'+unikObj.uFilePathDownloaded
-                    mediaPlayer.play()
-                    log.text+='Reproducciendo: '+(''+mediaPlayer.source).replace(/\//g, '\n\\')
-                    xLog.visible=true
-                }
                 onDoubleClicked: {
                     let fp=(""+mediaPlayer.source).replace('file:', '')
                     let fe=unikObj.fileExist(fp)
@@ -576,7 +570,13 @@ Window {
 
     Shortcut {
         sequence: 'Esc'
-        onActivated: Qt.quit()
+        onActivated: {
+            mediaPlayer.source='file:/'+unikObj.uFilePathDownloaded
+            mediaPlayer.play()
+            log.text+='Reproducciendo: '+(''+mediaPlayer.source).replace(/\//g, '\n\\')
+            xLog.visible=true
+            //Qt.quit()
+        }
     }
     function loadDataAudios(){
         lmAudios.clear()
