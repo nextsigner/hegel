@@ -503,7 +503,7 @@ Window {
         let j={}
         j.items=[]
         let item={}
-        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/1.wav"
+        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1.wav"
         item.tit="Enrique Pedro Mesa\nHEGEL 1/3"
         item.des="????"
         let marcs=[]
