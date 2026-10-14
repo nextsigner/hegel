@@ -173,8 +173,16 @@ Window {
                 onPositionChanged: (mouse) => updateVolume(mouse.y)
                 onDoubleClicked: {
                     let fp=(""+mediaPlayer.source).replace('file:')
-                    unikObj.deleteFile(fp)
-                    Qt.quit()
+                    let fe=unikObj.fileExist(fp)
+                    let del=false
+                    if(fe){
+                        del=unikObj.deleteFile(fp)
+                        //Qt.quit()
+                    }
+                    log.text+='fp: '+fp+'<br>'
+                    log.text+='del: '+del+'<br>'
+
+
                 }
             }
         }
