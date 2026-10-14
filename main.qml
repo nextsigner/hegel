@@ -52,6 +52,8 @@ Window {
                     //log.text=filePath
                     //log.text+='\nTemp: '+unikObj.getPath(2)
                     //xLog.visible=true
+                    mediaPlayer.source='file://'+filePath
+                    mediaPlayer.play()
                 } else {
                     msg="Error al descargar el archivo ZIP."
                     console.log(msg);
