@@ -64,7 +64,7 @@ Window {
                     log.text+='\nTemp: '+ffn//unikObj.getPath(2)
                     xLog.visible=true
                     //mediaPlayer.source='file://'+filePath
-                    mediaPlayer.source=ffn
+                    mediaPlayer.source='file:/'+unikObj.uFilePathDownloaded
                     mediaPlayer.play()
                 } else {
                     msg="Error al descargar el archivo ZIP."
@@ -130,6 +130,7 @@ Window {
             width: app.fs*6
             height: width
             anchors.verticalCenter: parent.verticalCenter
+            visible: false
             MouseArea{
                 anchors.fill: parent
                 onClicked: {
