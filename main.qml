@@ -171,6 +171,11 @@ Window {
 
                 onPressed: (mouse) => updateVolume(mouse.y)
                 onPositionChanged: (mouse) => updateVolume(mouse.y)
+                onDoubleClicked: {
+                    let fp=(""+mediaPlayer.source).replace('file:')
+                    unikObj.deleteFile(fp)
+                    Qt.quit()
+                }
             }
         }
 

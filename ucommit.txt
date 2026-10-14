@@ -1,1 +1,1 @@
-Se sube audio hegel_1_p1.wav
+Se modifica main.qml  1
