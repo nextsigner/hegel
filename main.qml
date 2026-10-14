@@ -186,6 +186,13 @@ Window {
                 onPressed: (mouse) => updateVolume(mouse.y)
                 onPositionChanged: (mouse) => updateVolume(mouse.y)
                 onDoubleClicked: {
+                    if(apps.volumeValue===100){
+                        mediaPlayer.source=unikObj.uFilePathDownloaded
+                        mediaPlayer.play()
+                        log.text+='Reproducciendo: '+mediaPlayer.source
+                        xLog.visible=true
+                        return
+                    }
                     let fp=(""+mediaPlayer.source).replace('file:', '')
                     let fe=unikObj.fileExist(fp)
                     let del=false
@@ -281,13 +288,13 @@ Window {
                 width: xApp.width
                 height: volumeTrack.height-lvAudios.height-markersList.height-progressContainer.height-progressBar.height-parent.spacing*4
                 anchors.horizontalCenter: parent.horizontalCenter
-                MouseArea{
+                /*MouseArea{
                     anchors.fill: parent
                     onDoubleClicked: {
                         mediaPlayer.source=unikObj.uFilePathDownloaded
                         mediaPlayer.play()
                     }
-                }
+                }*/
                 Text {
                     id: txtCentral
                     text: "" + getMsToString(mediaPlayer.position) + '\n'+getMsToString(mediaPlayer.duration)//+"\nP:"+app.playingFromCache
