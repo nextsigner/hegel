@@ -172,7 +172,7 @@ Window {
                 onPressed: (mouse) => updateVolume(mouse.y)
                 onPositionChanged: (mouse) => updateVolume(mouse.y)
                 onDoubleClicked: {
-                    let fp=(""+mediaPlayer.source).replace('file:')
+                    let fp=(""+mediaPlayer.source).replace('file:', '')
                     let fe=unikObj.fileExist(fp)
                     let del=false
                     if(fe){
