@@ -1,1 +1,1 @@
-Se modifica main.qml  10
+Se modifica main.qml  11

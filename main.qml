@@ -592,7 +592,7 @@ Window {
             //mediaPlayer.source=item.url
             app.playingFromCache=1
             progressBar.visible=true
-            unikObj.FileNameDownloaded=m0[m0.length-1]
+            unikObj.uFileNameDownloaded=m0[m0.length-1]
             let descargado=unikObj.downloadGitHubZip(item.url, m0[m0.length-1]);
             if(descargado){
                 mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
