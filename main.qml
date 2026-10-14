@@ -568,9 +568,16 @@ Window {
             app.playingFromCache=2
             //txtCentral.text+='\nCACHEADO'
         }else{
-            mediaPlayer.source=item.url
+            //mediaPlayer.source=item.url
             app.playingFromCache=1
-            unikObj.downloadGitHubZip(item.url, m0[m0.length-1]);
+            progressBar.visible=true
+            let descargado=unikObj.downloadGitHubZip(item.url, m0[m0.length-1]);
+            if(descargado){
+                mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
+            }else{
+                mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
+            }
+            mediaPlayer.play()
             //txtCentral.text+='\nRED'
         }
         //xLog.visible=true
