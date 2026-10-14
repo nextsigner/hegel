@@ -503,15 +503,15 @@ Window {
         let j={}
         j.items=[]
         let item={}
-        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1.wav"
-        item.tit="Enrique Pedro Mesa\nHEGEL 1/3"
+        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1_p1.wav"
+        item.tit="Enrique Pedro Mesa\nHEGEL (1.1/1.3)/3"
         item.des="????"
         let marcs=[]
 
         let marc={}
-        marc.titulo="Introducción a la física"
-        marc.des="Separamos la Física y la Metafísica Aristotélica. Mundo sublunar y supralunar, elementos y ether."
-        marc.ms=0
+        marc.titulo="Explicación Previa"
+        marc.des="Se aclara de qué modo se abordarán las 3 partes de la clase sobre Hegel."
+        marc.ms=getHmsToMs(0, 0, 33)
         marcs.push(marc)
 
         marc={}
