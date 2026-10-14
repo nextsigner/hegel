@@ -177,10 +177,9 @@ Window {
                     let del=false
                     if(fe){
                         del=unikObj.deleteFile(fp)
-                        //Qt.quit()
                     }
-                    txtCentral.text+='fp: '+fp+'<br>'
-                    txtCentral.text+='del: '+del+'<br>'
+                    //txtCentral.text+='fp: '+fp+'<br>'
+                    //txtCentral.text+='del: '+del+'<br>'
 
 
                 }
@@ -569,9 +568,9 @@ Window {
             app.playingFromCache=2
             //txtCentral.text+='\nCACHEADO'
         }else{
-            unikObj.downloadGitHubZip(item.url, m0[m0.length-1]);
             mediaPlayer.source=item.url
             app.playingFromCache=1
+            unikObj.downloadGitHubZip(item.url, m0[m0.length-1]);
             //txtCentral.text+='\nRED'
         }
         //xLog.visible=true
