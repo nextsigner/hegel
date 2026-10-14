@@ -45,12 +45,10 @@ Window {
                     let percent = (bytesReceived / bytesTotal) * 100;
                     msg="Progreso: " + percent.toFixed(2) + "% (" + bytesReceived + " / " + bytesTotal + " bytes)"
                     console.log(msg);
-                    //statusText.text=msg
                     progressBar.value = bytesReceived / bytesTotal;
                 } else {
                     msg="Descargando... Bytes recibidos: " + bytesReceived
                     console.log(msg);
-                    //statusText.text=msg
                 }
             }
             onDownloadFinished: function(success, filePath) {
@@ -58,17 +56,10 @@ Window {
                 if (success) {
                     let ffn=filePath//+'/'+unikObj.uFileNameDownloaded
                     unikObj.uFilePathDownloaded=filePath
-                    //console.log("¡Archivo descargado en la ruta temporal!: " + filePath);
-                    //txtCentral.text+='\n'+filePath
-                    //log.text=filePath
-                    log.text+='\nTemp: '+ffn//unikObj.getPath(2)
-                    xLog.visible=true
-                    //mediaPlayer.source='file://'+filePath
                     mediaPlayer.source='file:/'+unikObj.uFilePathDownloaded
                     mediaPlayer.play()
                 } else {
                     msg="Error al descargar el archivo ZIP."
-                    console.log(msg);
                 }
             }
         }
@@ -527,6 +518,15 @@ Window {
             }
             autoPlay: true
         }
+        MediaPlayer {
+            id: mediaPlayerSys
+            //source: "https://github.com/nextsigner/aristoteles/releases/download/filosof%C3%ADa/1.wav"
+            audioOutput: AudioOutput {
+                id: audioOutputSys
+                volume: apps.volumeValue / 100.0
+            }
+            autoPlay: true
+        }
 
         Rectangle{
             id: xLog
@@ -551,7 +551,7 @@ Window {
         let j={}
         j.items=[]
         let item={}
-        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1_p1.wav"
+        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1_p1.wav "
         item.tit="Enrique Pedro Mesa\nHEGEL (1.1/1.3)/3"
         item.des="????"
         let marcs=[]
@@ -610,6 +610,7 @@ Window {
             app.playingFromCache=1
             progressBar.visible=true
             unikObj.uFileNameDownloaded=m0[m0.length-1]
+            mediaPlayerSys.source='file:./sounds/descargando_audio.wav'
             let descargado=unikObj.downloadGitHubZip(item.url, m0[m0.length-1]);
             if(descargado){
                 mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
