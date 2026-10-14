@@ -30,6 +30,7 @@ Window {
             id: unikObj
             property string cProject: ''
             property string uFilePathDownloaded: ''
+            property string uFileNameDownloaded: ''
 
             onDownloadProgress: function(bytesReceived, bytesTotal) {
                 let msg=""
@@ -48,14 +49,15 @@ Window {
             onDownloadFinished: function(success, filePath) {
                 let msg=""
                 if (success) {
+                    let ffn=filePath+'/'+unikObj.FileNameDownloaded
                     unikObj.uFilePathDownloaded=filePath
                     console.log("¡Archivo descargado en la ruta temporal!: " + filePath);
                     //txtCentral.text+='\n'+filePath
                     //log.text=filePath
-                    log.text+='\nTemp: '+unikObj.getPath(2)
+                    log.text+='\nTemp: '+ffn//unikObj.getPath(2)
                     xLog.visible=true
                     //mediaPlayer.source='file://'+filePath
-                    mediaPlayer.source=filePath
+                    mediaPlayer.source=ffn
                     mediaPlayer.play()
                 } else {
                     msg="Error al descargar el archivo ZIP."
@@ -583,6 +585,7 @@ Window {
             //mediaPlayer.source=item.url
             app.playingFromCache=1
             progressBar.visible=true
+            unikObj.FileNameDownloaded=m0[m0.length-1]
             let descargado=unikObj.downloadGitHubZip(item.url, m0[m0.length-1]);
             if(descargado){
                 mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
