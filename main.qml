@@ -111,11 +111,11 @@ Window {
 
                             if (deltaX > 0) {
                                 newPosition += jumpTime;
-                                app.positionMin=newPosition
+                                //app.positionMin=newPosition
                                 mediaPlayer.position = Math.min(newPosition, mediaPlayer.duration)
                             } else {
                                 newPosition -= jumpTime;
-                                app.positionMin=newPosition
+                                //app.positionMin=newPosition
                                 mediaPlayer.position = Math.max(newPosition, 0)
                             }
                         }
@@ -460,7 +460,7 @@ Window {
                     MouseArea{
                         anchors.fill: parent
                         onDoubleClicked: {
-                            app.positionMin=posicion
+                            //app.positionMin=posicion
                             mediaPlayer.position = posicion
                         }
                     }
@@ -504,7 +504,7 @@ Window {
                 onCurrentIndexChanged: {
                     if (currentItem && mediaPlayer.duration > 0) {
                         var targetPos = model.get(currentIndex).posicion;
-                        app.positionMin=posicion
+                        //app.positionMin=posicion
                         mediaPlayer.position = Math.min(targetPos, mediaPlayer.duration);
                     }
                 }
@@ -569,6 +569,7 @@ Window {
         let marcs
         let marc
 
+        app.positionMin=33*1000
         //Item 1
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1_p1.wav"
