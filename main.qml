@@ -572,7 +572,7 @@ Window {
         marc={}
         marc.titulo="111"
         marc.des="111"
-        marc.ms=701000
+        marc.ms=getHmsToMs(0, 0, 33)
         marcs.push(marc)
 
         item.marcs=marcs
