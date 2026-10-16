@@ -124,7 +124,7 @@ Window {
             width: app.fs*6
             height: width
             anchors.verticalCenter: parent.verticalCenter
-            //visible: false
+            visible: false
             Text{
                 text: 'Ms:'+app.positionMin
                 font.pixelSize: app.fs
@@ -574,13 +574,37 @@ Window {
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1_p1.wav"
         item.tit="Enrique Pedro Mesa\nHEGEL (1.1/1.3)/3"
-        item.des="????"
+        item.des="Realiad y Dialéctica"
         marcs=[]
 
         marc={}
-        marc.titulo="111"
-        marc.des="111"
+        marc.titulo="Preámbulo introductorio"
+        marc.des="Se explica en qué consistirán las siguientes explicaciones sobre Hegel en esta calse."
         marc.ms=getHmsToMs(0, 0, 33)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="Idea 1: LA REALIDAD"
+        marc.des="¿Qué es la realidad? Es todo lo que hay. PRESENTE PERMANENTE (contínuo)."
+        marc.ms=getHmsToMs(0, 3, 32)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="Idea 2: LA HISTÓRIA"
+        marc.des="La história demuestra que la realidad no es fija. La realidad se transforma."
+        marc.ms=getHmsToMs(0, 7, 19)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="Idea 3: NUEVA DEFINICIÓN DE REALIDAD"
+        marc.des="La temporalirad. LA REALIDAD ES LO QUE HAY, LO QUE ES, LO QUE FUÉ Y LO QUE SERÁ. La realidad es TODO lo que ES sin importar cuándo."
+        marc.ms=getHmsToMs(0, 10, 31)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="Idea 4: EL MOTOR (EL DESARROLLO DEL ESPÍRITU ABSOLUTO)"
+        marc.des="Lo que hace cambair la realidad. ¿Hay aluna meta?. El motor podría ser IRRACIONAL. Hegel afirma que es RACIONAL porque hay un ORDEN y SENTIDO. Busca EL DESARROLLO DE LA HISTÓRIA, LA RAZÓN y el ESPÍRITU ABSOLUTO."
+        marc.ms=getHmsToMs(0, 13, 16)
         marcs.push(marc)
 
         item.marcs=marcs
