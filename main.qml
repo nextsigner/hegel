@@ -532,6 +532,15 @@ Window {
                     mediaPlayer.position=app.positionMin
                 }
             }
+            nMediaStatusChanged: {
+                    if (mediaPlayer.mediaStatus === MediaPlayer.EndOfMedia) {
+                        console.log("¡El audio ha llegado al final!")
+
+                        if(lvAudios.currentIndex<lvAudios.model.count-1){
+                            lvAudios.currentIndex++
+                        }
+                    }
+                }
             autoPlay: true
         }
         MediaPlayer {
