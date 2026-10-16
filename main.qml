@@ -111,9 +111,11 @@ Window {
 
                             if (deltaX > 0) {
                                 newPosition += jumpTime;
+                                app.positionMin=newPosition
                                 mediaPlayer.position = Math.min(newPosition, mediaPlayer.duration)
                             } else {
                                 newPosition -= jumpTime;
+                                app.positionMin=newPosition
                                 mediaPlayer.position = Math.max(newPosition, 0)
                             }
                         }
