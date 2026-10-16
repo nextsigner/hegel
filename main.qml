@@ -16,7 +16,8 @@ Window {
     property int fs: !appRotated?width*0.035:height*0.035
     property var json
     property string tempFolder: ''
-    property int playingFromCache: -1//mediaPlayer.source.indexOf('file:')>=0
+    property int playingFromCache: -1
+    property int positionMin: 0
 
 
     Settings {
@@ -451,7 +452,10 @@ Window {
                     rotation: -180
                     MouseArea{
                         anchors.fill: parent
-                        onDoubleClicked: mediaPlayer.position = posicion
+                        onDoubleClicked: {
+                            app.positionMin=posicion
+                            mediaPlayer.position = posicion
+                        }
                     }
 
                     Column {
@@ -493,6 +497,7 @@ Window {
                 onCurrentIndexChanged: {
                     if (currentItem && mediaPlayer.duration > 0) {
                         var targetPos = model.get(currentIndex).posicion;
+                        app.positionMin=posicion
                         mediaPlayer.position = Math.min(targetPos, mediaPlayer.duration);
                     }
                 }
@@ -514,6 +519,11 @@ Window {
             audioOutput: AudioOutput {
                 id: audioOutput
                 volume: apps.volumeValue / 100.0
+            }
+            onPositionChanged:{
+                if(position<app.positionMin){
+                    position=app.positionMin
+                }
             }
             autoPlay: true
         }
