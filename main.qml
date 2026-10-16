@@ -124,7 +124,12 @@ Window {
             width: app.fs*6
             height: width
             anchors.verticalCenter: parent.verticalCenter
-            visible: false
+            //visible: false
+            Text{
+                text: 'Ms:'+app.positionMin
+                font.pixelSize: app.fs
+                anchors.centerIn: parent
+            }
             MouseArea{
                 anchors.fill: parent
                 onClicked: {
