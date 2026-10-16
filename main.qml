@@ -643,7 +643,7 @@ Window {
         let m0=item.url.split('/')
         //unikObj.downloadGitHubZip(item.url, "prueba.wav");
         if(index===0){
-            app.positionMin=item[0].marcs[0].ms
+            app.positionMin=item.marcs[0].ms
         }
         if(unikObj.fileExist(unikObj.getPath(2)+'/'+m0[m0.length-1])){
             mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
