@@ -639,22 +639,19 @@ Window {
     function loadData(index){
         lm.clear()
         let item=app.json.items[index]
-        //labelTit.text=item.tit
         let m0=item.url.split('/')
-        //unikObj.downloadGitHubZip(item.url, "prueba.wav");
         if(index===0){
             app.positionMin=item.marcs[0].ms
+        }else{
+            app.positionMin=0
         }
         if(unikObj.fileExist(unikObj.getPath(2)+'/'+m0[m0.length-1])){
             mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
             app.playingFromCache=2
-            //txtCentral.text+='\nCACHEADO'
         }else{
-            //mediaPlayer.source=item.url
             app.playingFromCache=1
             progressBar.visible=true
             unikObj.uFileNameDownloaded=m0[m0.length-1]
-            //mediaPlayerSys.source='file:./sounds/descargando_audio.wav'
             let descargado=unikObj.downloadGitHubZip(item.url, m0[m0.length-1]);
             if(descargado){
                 mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
@@ -662,14 +659,9 @@ Window {
                 mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
             }
             mediaPlayer.play()
-            //txtCentral.text+='\nRED'
         }
-        //xLog.visible=true
-        //log.text=JSON.stringify(item, null, 2)
-        //return
         for(var i=0;i<item.marcs.length;i++){
             let marc=item.marcs[i]
-            //log.text=JSON.stringify(marc, null, 2)
             lm.append(lm.addItem(marc.titulo, marc.des,marc.ms))
         }
     }
