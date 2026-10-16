@@ -623,7 +623,7 @@ Window {
         //Item 2
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1_p2.wav"
-        item.tit="Enrique Pedro Mesa\nHEGEL (1.1/1.3)/3"
+        item.tit="Enrique Pedro Mesa\nHEGEL (1.2/1.3)/3"
         item.des="????"
         marcs=[]
 
@@ -639,7 +639,7 @@ Window {
         //Item 3
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1_p3.wav"
-        item.tit="Enrique Pedro Mesa\nHEGEL (1.1/1.3)/3"
+        item.tit="Enrique Pedro Mesa\nHEGEL (1.3/1.3)/3"
         item.des="????"
         marcs=[]
 
