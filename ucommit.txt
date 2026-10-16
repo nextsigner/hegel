@@ -1,1 +1,1 @@
-Se modifica main.qml  20
+Se agregan audios. commits 1

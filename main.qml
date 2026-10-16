@@ -511,7 +511,6 @@ Window {
         }
         MediaPlayer {
             id: mediaPlayer
-            //source: "https://github.com/nextsigner/aristoteles/releases/download/filosof%C3%ADa/1.wav"
             audioOutput: AudioOutput {
                 id: audioOutput
                 volume: apps.volumeValue / 100.0
@@ -520,7 +519,6 @@ Window {
         }
         MediaPlayer {
             id: mediaPlayerSys
-            //source: "https://github.com/nextsigner/aristoteles/releases/download/filosof%C3%ADa/1.wav"
             audioOutput: AudioOutput {
                 id: audioOutputSys
                 volume: apps.volumeValue / 100.0
@@ -550,29 +548,54 @@ Window {
     Component.onCompleted: {
         let j={}
         j.items=[]
-        let item={}
+        let item
+        let marcs
+        let marc
+
+        //Item 1
+        item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1_p1.wav "
         item.tit="Enrique Pedro Mesa\nHEGEL (1.1/1.3)/3"
         item.des="????"
-        let marcs=[]
-
-        let marc={}
-        marc.titulo="Explicación Previa"
-        marc.des="Se aclara de qué modo se abordarán las 3 partes de la clase sobre Hegel."
-        marc.ms=getHmsToMs(0, 0, 33)
-        marcs.push(marc)
+        marcs=[]
 
         marc={}
-        marc.titulo="Teoría Hilemórficas"
-        marc.des="Forma y materia, sustancia primera y sustancia segunda."
+        marc.titulo="111"
+        marc.des="111"
         marc.ms=701000
         marcs.push(marc)
 
+        item.marcs=marcs
+        j.items.push(item)
+
+        //Item 2
+        item={}
+        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1_p2.wav "
+        item.tit="Enrique Pedro Mesa\nHEGEL (1.1/1.3)/3"
+        item.des="????"
+        marcs=[]
 
         marc={}
-        marc.titulo="RESUMEN FINAL"
-        marc.des="Se explica de manera resumida lo explicado."
-        marc.ms=getHmsToMs(0, 23, 45)
+        marc.titulo="111"
+        marc.des="111"
+        marc.ms=701000
+        marcs.push(marc)
+
+        item.marcs=marcs
+        j.items.push(item)
+
+        //Item 3
+        item={}
+        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1_p3.wav "
+        item.tit="Enrique Pedro Mesa\nHEGEL (1.1/1.3)/3"
+        item.des="????"
+        marcs=[]
+
+        marc={}
+        marc.titulo="111"
+        marc.des="111"
+        marc.ms=701000
+        marcs.push(marc)
 
         item.marcs=marcs
         j.items.push(item)
