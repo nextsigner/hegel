@@ -603,7 +603,7 @@ Window {
 
         marc={}
         marc.titulo="Idea 4: EL MOTOR (EL DESARROLLO DEL ESPÍRITU ABSOLUTO)"
-        marc.des="Lo que hace cambair la realidad. ¿Hay aluna meta?. El motor podría ser IRRACIONAL. Hegel afirma que es RACIONAL porque hay un ORDEN y SENTIDO. Busca EL DESARROLLO DE LA HISTÓRIA, LA RAZÓN y el ESPÍRITU ABSOLUTO."
+        marc.des="El motor podría ser IRRACIONAL. Hegel afirma que es RACIONAL porque hay un ORDEN y SENTIDO. Busca EL DESARROLLO DE LA HISTÓRIA, LA RAZÓN y el ESPÍRITU ABSOLUTO."
         marc.ms=getHmsToMs(0, 13, 16)
         marcs.push(marc)
 
