@@ -521,8 +521,8 @@ Window {
                 volume: apps.volumeValue / 100.0
             }
             onPositionChanged:{
-                if(position<app.positionMin){
-                    position=app.positionMin
+                if(mediaPlayer.position<app.positionMin){
+                    mediaPlayer.position=app.positionMin
                 }
             }
             autoPlay: true
