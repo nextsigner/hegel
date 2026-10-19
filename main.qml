@@ -624,13 +624,37 @@ Window {
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1_p2.wav"
         item.tit="Enrique Pedro Mesa\nHEGEL (1.2/1.3)/3"
-        item.des="????"
+        item.des="Desarrollo de la razón, abstracción..."
         marcs=[]
 
         marc={}
-        marc.titulo="111"
-        marc.des="111"
-        marc.ms=701000
+        marc.titulo="EL DESARROLLO DE LA RAZÓN"
+        marc.des="¿Qué es?. Superando lo real, la razón al avanzar busca que a la REALIDAD QUE HAY LE PIDE CADA VEZ MÁS. Camino a la RACIONALIDAD ABSOLUTA."
+        marc.ms=getHmsToMs(0, 0, 0)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="LA ABSTRACCIÓN"
+        marc.des="Ejemplo de la moneda de metal y el papel moneda."
+        marc.ms=getHmsToMs(0, 2, 45)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="LA AUTOCONSCIENCIA"
+        marc.des="Una mayor abstracción lleva a una mayor AUTOCONSCIENCIA. La historia va comprendiéndose a sí mismo."
+        marc.ms=getHmsToMs(0, 6, 9)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="LA DIALÉCTICA"
+        marc.des="La dialéctica es lo que permite es DESARROLLO DE LA HISTORIA. El elemento clave es LA NEGACIÓN . La NEGATIVIDAD por encima del CAMBIO, lo DISTINTO y lo CONTRARIO."
+        marc.ms=getHmsToMs(0, 7, 44)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="SUPERACIÓN DE LOS PRINCIPIOS"
+        marc.des="LOS PRINCIPIOS DE IDENTIDAD Y LOS PRINCIPIOS DE NO SUPERACIÓN."
+        marc.ms=getHmsToMs(0, 15, 30)
         marcs.push(marc)
 
         item.marcs=marcs
