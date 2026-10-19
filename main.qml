@@ -668,9 +668,15 @@ Window {
         marcs=[]
 
         marc={}
-        marc.titulo="111"
-        marc.des="111"
-        marc.ms=701000
+        marc.titulo="TÉSIS, ANTÍTESIS Y SÍNTESIS"
+        marc.des="Superación de la negatividad."
+        marc.ms=getHmsToMs(0, 0, 0)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="IDEALISMO ABSOLUTO"
+        marc.des="¿Qué es? La RAZÓN DETERMINA LA REALIDAD."
+        marc.ms=getHmsToMs(0, 3, 18)
         marcs.push(marc)
 
         item.marcs=marcs
