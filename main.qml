@@ -675,8 +675,26 @@ Window {
 
         marc={}
         marc.titulo="IDEALISMO ABSOLUTO"
-        marc.des="¿Qué es? La RAZÓN DETERMINA LA REALIDAD."
+        marc.des="¿Qué es? Es un PROCESO DEL DESARROLLO DE LA RAZÓN. La RAZÓN DETERMINA LA REALIDAD."
         marc.ms=getHmsToMs(0, 3, 18)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="TODO CAMBIA POR LA RAZÓN"
+        marc.des="NADA ESCAPA A LA RAZÓN. La razón determina el cambio/proceso de todo. La razón del Espítiru Absoluto que se encuentra a sí mismo."
+        marc.ms=getHmsToMs(0, 5, 32)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="EL FINAL DE LA HISTÓRIA"
+        marc.des="El final del proceso es, TODO LO REAL ES RACIONAL Y TODO LO RACIONAL ES LO REAL. La metáfora de la Lechuza de Minerva. Solo se conoce la realidad y la verdad al final."
+        marc.ms=getHmsToMs(0, 8, 31)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="RESUMEN"
+        marc.des="Se resume todo lo explicado hasta ahora."
+        marc.ms=getHmsToMs(0, 12, 45)
         marcs.push(marc)
 
         item.marcs=marcs
