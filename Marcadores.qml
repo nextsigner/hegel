@@ -129,6 +129,36 @@ Item{
         item.marcs=marcs
         j.items.push(item)
 
+        //Item 4
+        item={}
+        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_2_p1.wav"
+        item.tit="Enrique Pedro Mesa\nHEGEL (2.1/2.3)/3"
+        item.des="????"
+        marcs=[]
+
+        item.marcs=marcs
+        j.items.push(item)
+
+        //Item 5
+        item={}
+        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_2_p2.wav"
+        item.tit="Enrique Pedro Mesa\nHEGEL (2.2/2.3)/3"
+        item.des="????"
+        marcs=[]
+
+        item.marcs=marcs
+        j.items.push(item)
+
+        //Item 6
+        item={}
+        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_2_p3.wav"
+        item.tit="Enrique Pedro Mesa\nHEGEL (2.3/2.3)/3"
+        item.des="????"
+        marcs=[]
+
+        item.marcs=marcs
+        j.items.push(item)
+
         app.json=j
 
         app.loadDataAudios()
