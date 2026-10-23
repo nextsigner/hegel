@@ -572,8 +572,9 @@ Window {
             }
         }
     }
+    Marcadores{}
     Component.onCompleted: {
-        let j={}
+        /*let j={}
         j.items=[]
         let item
         let marcs
@@ -703,7 +704,7 @@ Window {
         app.json=j
 
         loadDataAudios()
-        loadData(0)
+        loadData(0)*/
     }
 
     Shortcut {
