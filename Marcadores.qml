@@ -139,6 +139,48 @@ Item{
         item.marcs=marcs
         j.items.push(item)
 
+        marc={}
+        marc.titulo="Introducción a la °2 parte"
+        marc.des="Se introduce al contexto de lo que se explicará a continuación."
+        marc.ms=getHmsToMs(0, 0, 45)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="EL CONOCIMIENTO SEGÚN HEGEL"
+        marc.des="Si el conocimiento fuera por correspodencia solo podríamos conocer este momento pero como la realidad está permanentemente cambiando no conoceriamos la UNA PARTE de la realidad."
+        marc.ms=getHmsToMs(0, 0, 45)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="LA GRAN PREGUNTA KANTIANA"
+        marc.des="¿Qué puedo conocer? Análisis del conocimiento y la realidad. Analizar CÓMO CONOZCO y CÓMO ES LA REALIDAD. Hegel afirma que la VERDAD NO ES DEL YO."
+        marc.ms=getHmsToMs(0, 5, 16)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="LA CONSCIENCIA UNIVERSAL"
+        marc.des="La verdad no puede ser algo individual, no puede ser algo PARCIAL, es UNIVERSAL Y ABSOLUTA. La verdad y la realidad se busca en la Consciencia Absoluta."
+        marc.ms=getHmsToMs(0, 7, 23)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="BREVE RESUMEN"
+        marc.des="Se explica en resumen los conceptos hasta ahora explicados."
+        marc.ms=getHmsToMs(0, 10, 54)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="IDEALISMO: LA PRIMACÍA DE LA CONSCIENCIA"
+        marc.des="La meta es la CORRESPONDENCIA entre EL SUJETO como OBJETO (lo que piensa) y el CONTEXTO. Relación de la CONSCIENCIA con algo DISTINTO."
+        marc.ms=getHmsToMs(0, 12, 45)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="IDEALISMO ABSOLUTO"
+        marc.des=""
+        marc.ms=getHmsToMs(0, 18, 54)
+        marcs.push(marc)
+
         //Item 5
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_2_p2.wav"
