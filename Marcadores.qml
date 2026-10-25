@@ -240,6 +240,18 @@ Item{
         item.des="????"
         marcs=[]
 
+        marc={}
+        marc.titulo="Introducción antes de resumir"
+        marc.des="Se explica qué y cómo se resumirá."
+        marc.ms=getHmsToMs(0, 0, 0)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="Resumen"
+        marc.des="Realidad y conocimiento. Buscamos conocer la realidad en SI, el NOUMENO KANTIANO negado pro SHOPENHOWER."
+        marc.ms=getHmsToMs(0, 0, 56)
+        marcs.push(marc)
+
         item.marcs=marcs
         j.items.push(item)
 
