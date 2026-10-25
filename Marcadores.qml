@@ -93,7 +93,7 @@ Item{
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_1_p3.wav"
         item.tit="Enrique Pedro Mesa\nHEGEL (1.3/1.3)/3"
-        item.des="????"
+        item.des="Tésis, Antítesis y Síntesis. Idealismo Absoluto. Todo cambia por la razón."
         marcs=[]
 
         marc={}
@@ -237,7 +237,7 @@ Item{
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_2_p3.wav"
         item.tit="Enrique Pedro Mesa\nHEGEL (2.3/2.3)/3"
-        item.des="????"
+        item.des="Resumen general de los explicado en el video divulgativo 2 sobre Hegel."
         marcs=[]
 
         marc={}
