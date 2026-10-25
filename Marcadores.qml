@@ -224,6 +224,12 @@ Item{
         marc.ms=getHmsToMs(0, 14, 16)
         marcs.push(marc)
 
+        marc={}
+        marc.titulo="EL DESPLIEGUE DEL ESPÍRITU ABSOLUTO"
+        marc.des="La realidad está en la consciencia universal / absoluta. Objeto y Concepto ambos están en la misma realidad."
+        marc.ms=getHmsToMs(0, 16, 2)
+        marcs.push(marc)
+
         item.marcs=marcs
         j.items.push(item)
 
