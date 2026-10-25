@@ -133,7 +133,7 @@ Item{
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_2_p1.wav"
         item.tit="Enrique Pedro Mesa\nHEGEL (2.1/2.3)/3"
-        item.des="????"
+        item.des="El conocimiento, la verdad, la primacía de la consciencia. La consciencia universal. IDEALISMO."
         marcs=[]
 
         item.marcs=marcs
@@ -185,8 +185,44 @@ Item{
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_2_p2.wav"
         item.tit="Enrique Pedro Mesa\nHEGEL (2.2/2.3)/3"
-        item.des="????"
+        item.des="Terminología Hegeliana. Pasos del conocimiento. En sí para sí. Tensión Dialéctica por Negatividad."
         marcs=[]
+
+        marc={}
+        marc.titulo="Los PASOS DEL CONOCIMIENTO"
+        marc.des="Cómo conozco. Para conocer es necesario que la consciencia perciba algo distinto (OBJETO aparentemente real). El objeto será PARA SÍ y EN SÍ"
+        marc.ms=getHmsToMs(0, 0, 0)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="¿Qué busca la consciencia?"
+        marc.des="La consciencia universal busca EL CONCEPTO UNIVERSAL, la DEFINICIÓN UNIVERSAL que sirva para cualquier caso, ocación o elemento, la NEGACIÓN DEL PARTICULAR."
+        marc.ms=getHmsToMs(0, 5, 50)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="¿Cómo superamos la NEGATIVIDAD?"
+        marc.des="Se supera dominando al PARTICULAR. Siendo capaz de subsumirlo en el concepto y el PARTICULAR DEJA DE SER. Ahora el concepto es ahora EN SÍ Y PARA SÍ."
+        marc.ms=getHmsToMs(0, 7, 12)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="ESPÍRiTU ABSOLUTO"
+        marc.des="La realidad es movimiento y es dialéctica. El particular cambia y vuelve a ser un ENTE, un PARA SÍ, otra vez el esfuerso del CONCEPTO y así hasta la llegada del ESPÍRiTU ABSOLUTO."
+        marc.ms=getHmsToMs(0, 8, 12)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="Resumen para continuar"
+        marc.des="Se explican y repasan los conceptos para continuar para DAR UN PASO MÁS."
+        marc.ms=getHmsToMs(0, 9, 45)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="IDEALISMO ABSOLUTO"
+        marc.des="¿De donde sale el Idealismo Absoluto?. El objeto solo es objeto porque está en la consciencia. Son MOMENTOS de la consciencia. No existe NADA FUERA DE LA CONSCIENCIA DEL ESTPÍRITU ABSOLUTO que se desarrolla."
+        marc.ms=getHmsToMs(0, 14, 16)
+        marcs.push(marc)
 
         item.marcs=marcs
         j.items.push(item)
