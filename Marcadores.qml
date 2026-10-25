@@ -225,7 +225,7 @@ Item{
         marcs.push(marc)
 
         marc={}
-        marc.titulo="EL DESPLIEGUE DEL ESPÍRITU ABSOLUTO"
+        marc.titulo="La HISTORIA, EL DESPLIEGUE DEL ESPÍRITU ABSOLUTO"
         marc.des="La realidad está en la consciencia universal / absoluta. Objeto y Concepto ambos están en la misma realidad."
         marc.ms=getHmsToMs(0, 16, 2)
         marcs.push(marc)
