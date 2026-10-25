@@ -255,6 +255,55 @@ Item{
         item.marcs=marcs
         j.items.push(item)
 
+        //Item 7
+        item={}
+        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_3_p1.wav"
+        item.tit="Enrique Pedro Mesa\nHEGEL (3.1/3.3)/3"
+        item.des=""
+        marcs=[]
+
+        marc={}
+        marc.titulo="Introducción al video 3"
+        marc.des="Nos ponemos en contexto."
+        marc.ms=getHmsToMs(0, 0, 0)
+        marcs.push(marc)
+
+        item.marcs=marcs
+        j.items.push(item)
+
+        //Item 8
+        item={}
+        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_3_p2.wav"
+        item.tit="Enrique Pedro Mesa\nHEGEL (3.2/3.3)/3"
+        item.des=""
+        marcs=[]
+
+        marc={}
+        marc.titulo="Parte 2 del video 3"
+        marc.des="Continúa la clase 3"
+        marc.ms=getHmsToMs(0, 0, 0)
+        marcs.push(marc)
+
+        item.marcs=marcs
+        j.items.push(item)
+
+        //Item 9
+        item={}
+        item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_3_p3.wav"
+        item.tit="Enrique Pedro Mesa\nHEGEL (3.3/3.3)/3"
+        item.des=""
+        marcs=[]
+
+        marc={}
+        marc.titulo="Parte 3 del video 3"
+        marc.des="Finaliza la clase 3"
+        marc.ms=getHmsToMs(0, 0, 0)
+        marcs.push(marc)
+
+        item.marcs=marcs
+        j.items.push(item)
+
+
         app.json=j
 
         app.loadDataAudios()
