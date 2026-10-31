@@ -323,7 +323,7 @@ Window {
                         }
                         if(del){
 
-                            let item=app.json.items[index]
+                            let item=app.json.items[lvAudios.currentIndex]
                             log.text+='Archivo eliminado: '+fp+'\n'
                             log.text+='Descargar : '+item.url+'\n'
                             xLog.visible=true
@@ -574,7 +574,9 @@ Window {
         Rectangle{
             id: xLog
             color: 'black'
-            anchors.fill: parent
+            width: xApp.width
+            height: xApp.height
+            anchors.centerIn: parent
             visible: false
             MouseArea{
                 anchors.fill: parent
@@ -585,7 +587,7 @@ Window {
                 width: parent.width-app.fs
                 color: 'white'
                 wrapMode: Text.WordWrap
-                font.pixelSize: 12
+                font.pixelSize: app.fs*2
                 anchors.centerIn: parent
             }
         }
