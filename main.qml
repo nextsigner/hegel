@@ -320,33 +320,7 @@ Window {
                 Button{
                     text: "Recargar"
                     onClicked: {
-                        let fp=(""+mediaPlayer.source).replace('file:', '')
-                        let fe=unikObj.fileExist(fp)
-                        let del=false
-                        if(fe){
-                            del=unikObj.deleteFile(fp)
-                        }
-                        if(del){
-
-                            let item=app.json.items[lvAudios.currentIndex]
-                            let m0=item.url.split('/')
-                            app.playingFromCache=1
-                            progressBar.visible=true
-                            unikObj.uFileNameDownloaded=m0[m0.length-1]
-                            let descargado=unikObj.downloadGitHubZip(item.url, m0[m0.length-1]);
-                            if(descargado){
-                                mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
-                            }else{
-                                log.text+='Ha fallado la descarga del audio: '+item.url+'\n'
-                                xLog.visible=true
-                                return
-                            }
-                            mediaPlayer.play()
-
-                            log.text+='Archivo eliminado: '+fp+'\n'
-                            log.text+='Descargar : '+item.url+'\n'
-                            xLog.visible=true
-                        }
+                        xTools.visible=true
                     }
                 }
             }
@@ -591,9 +565,78 @@ Window {
         }
 
         Rectangle{
+            id: xTools
+            color: 'black'
+            width: xApp.width-volumeHandle.width
+            height: xApp.height
+            anchors.centerIn: parent
+            visible: false
+            Column{
+                spacing: app.fs
+                anchors.centerIn: parent
+                Button{
+                    text: "Recargar"
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    onClicked: {
+                        let fp=(""+mediaPlayer.source).replace('file:', '')
+                        let fe=unikObj.fileExist(fp)
+                        let del=false
+                        if(fe){
+                            del=unikObj.deleteFile(fp)
+                        }
+                        if(del){
+
+                            let item=app.json.items[lvAudios.currentIndex]
+                            let m0=item.url.split('/')
+                            app.playingFromCache=1
+                            progressBar.visible=true
+                            unikObj.uFileNameDownloaded=m0[m0.length-1]
+                            let descargado=unikObj.downloadGitHubZip(item.url, m0[m0.length-1]);
+                            if(descargado){
+                                mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
+                            }else{
+                                log.text+='Ha fallado la descarga del audio: '+item.url+'\n'
+                                xLog.visible=true
+                                return
+                            }
+                            mediaPlayer.play()
+
+                            log.text+='Archivo eliminado: '+fp+'\n'
+                            log.text+='Descargar : '+item.url+'\n'
+                            xLog.visible=true
+                        }
+                    }
+                }
+                Button{
+                    text: "Eliminar Audio"
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    onClicked: {
+                        mediaPlayer.stop()
+                        let fp=(""+mediaPlayer.source).replace('file:', '')
+                        let fe=unikObj.fileExist(fp)
+                        let del=false
+                        if(fe){
+                            del=unikObj.deleteFile(fp)
+                        }
+                        if(del){
+                            log.text+='Archivo eliminado: '+fp+'\n'
+                            xLog.visible=true
+                        }
+                    }
+                }
+                Button{
+                    text: "Listo"
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    onClicked: {
+                        xTools.visible=false
+                    }
+                }
+            }
+        }
+        Rectangle{
             id: xLog
             color: 'black'
-            width: xApp.width
+            width: xApp.width-volumeHandle.width
             height: xApp.height
             anchors.centerIn: parent
             visible: false
