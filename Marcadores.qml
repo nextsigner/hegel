@@ -380,14 +380,20 @@ Item{
 
         marc={}
         marc.titulo="LA FILOSOFÍA"
-        marc.des="La filosofía es pura actividad discursiva y conceptual."
+        marc.des="La filosofía es pura actividad discursiva y conceptual.+"
         marc.ms=getHmsToMs(0, 7, 0)
         marcs.push(marc)
 
         marc={}
-        marc.titulo=""
-        marc.des=""
-        marc.ms=getHmsToMs(0, 1, 20)
+        marc.titulo="EL FÍN DE LA HISTÓRIA"
+        marc.des="La superación de toda contradicción y el final del despliegue del Espíritu Absoluto."
+        marc.ms=getHmsToMs(0, 9, 8)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="RESUMEN FINAL SOBRE HEGEL"
+        marc.des="Se repasa, se explica y se resume todo lo explicado en esta última clase sobre Hegel."
+        marc.ms=getHmsToMs(0, 10, 53)
         marcs.push(marc)
 
         item.marcs=marcs
