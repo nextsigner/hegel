@@ -259,13 +259,31 @@ Item{
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_3_p1.wav"
         item.tit="Enrique Pedro Mesa\nHEGEL (3.1/3.3)/3"
-        item.des=""
+        item.des="Del Libro la Fenomenología del Espítitu"
         marcs=[]
 
         marc={}
         marc.titulo="Introducción al video 3"
         marc.des="Nos ponemos en contexto."
         marc.ms=getHmsToMs(0, 0, 0)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="3 Momentos del Espíritu"
+        marc.des="Cuando esos 3 momentos se eencuentren en el despliegue del Espíritu Absoluto. Se desarrolla en el TIEMPO, EN LA HISTÓRIA a traves de 3 momentos en COLUMNAS PARALELAS."
+        marc.ms=getHmsToMs(0, 2, 35)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="El ESPÍRITU SUBJETIVO"
+        marc.des="Es el Desarrollo de la CONSCIENCIA/AUTOCONSCIENCIA del individuo sobre SÍ MISMO."
+        marc.ms=getHmsToMs(0, 5, 55)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="El ESPÍRITU OBJETIVO"
+        marc.des=""
+        marc.ms=getHmsToMs(0, 5, 55)
         marcs.push(marc)
 
         item.marcs=marcs
