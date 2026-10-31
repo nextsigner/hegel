@@ -18,6 +18,7 @@ Window {
     property string tempFolder: ''
     property int playingFromCache: -1
     property int positionMin: 0
+    property bool descargando: false
 
 
     Settings {
@@ -46,6 +47,7 @@ Window {
             property string uFileNameDownloaded: ''
 
             onDownloadProgress: function(bytesReceived, bytesTotal) {
+                app.descargando=true
                 let msg=""
                 if (bytesTotal > 0) {
                     let percent = (bytesReceived / bytesTotal) * 100;
@@ -58,6 +60,7 @@ Window {
                 }
             }
             onDownloadFinished: function(success, filePath) {
+                app.descargando=false
                 let msg=""
                 if (success) {
                     let ffn=filePath//+'/'+unikObj.uFileNameDownloaded
@@ -352,14 +355,14 @@ Window {
                 Text {
                     //text: "Reproducido: %" + progressContainer.porcentaje
                     text: {
-                        if (mediaPlayer.playbackState === MediaPlayer.PlayingState) {
+                        if (mediaPlayer.playbackState === MediaPlayer.PlayingState && !app.descargando) {
                             return "Reproduciendo: %" + progressContainer.porcentaje;
-                        } else if (mediaPlayer.playbackState === MediaPlayer.PausedState) {
+                        } else if (mediaPlayer.playbackState === MediaPlayer.PausedState  && !app.descargando) {
                             return "Pausado: %" + progressContainer.porcentaje;
-                        } else if (mediaPlayer.mediaStatus === MediaPlayer.LoadedMedia) {
+                        } else if (mediaPlayer.mediaStatus === MediaPlayer.LoadedMedia  && !app.descargando) {
                             return "Preparado: %100";
                         } else {
-                            return "?";
+                            return "Descargando %"+progressBar.value;
                         }
                     }
                     color: {
@@ -567,15 +570,21 @@ Window {
         Rectangle{
             id: xTools
             color: 'black'
-            width: xApp.width-volumeHandle.width
+            width: xApp.width//-volumeHandle.width
             height: xApp.height
             anchors.centerIn: parent
             visible: false
             Column{
                 spacing: app.fs
                 anchors.centerIn: parent
+                Text{
+                    text: "Herramientas"
+                    font.pixelSize: app.fs*1.5
+                    color: apps.fontColor
+                }
                 Button{
                     text: "Recargar"
+                    font.pixelSize: app.fs*1.5
                     anchors.horizontalCenter: parent.horizontalCenter
                     onClicked: {
                         let fp=(""+mediaPlayer.source).replace('file:', '')
@@ -601,14 +610,15 @@ Window {
                             }
                             mediaPlayer.play()
 
-                            log.text+='Archivo eliminado: '+fp+'\n'
-                            log.text+='Descargar : '+item.url+'\n'
-                            xLog.visible=true
+                            //log.text+='Archivo eliminado: '+fp+'\n'
+                            //log.text+='Descargar : '+item.url+'\n'
+                            //xLog.visible=true
                         }
                     }
                 }
                 Button{
                     text: "Eliminar Audio"
+                    font.pixelSize: app.fs*1.5
                     anchors.horizontalCenter: parent.horizontalCenter
                     onClicked: {
                         mediaPlayer.stop()
