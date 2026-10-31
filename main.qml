@@ -32,7 +32,7 @@ Window {
         onMessagesChanged:{
             let msg=qmlErrorLogger.messages[qmlErrorLogger.messages.length-1]
             if(msg.indexOf('Coul not')){
-                log.text+='-->Fallo al cargar: '+msg+'<br>'
+                //log.text+='-->Fallo al cargar: '+msg+'<br>'
             }else{
                 log.text+=''+msg+'<br>'
             }
@@ -333,9 +333,8 @@ Window {
                 height: app.fs*4
                 border.width: 1
                 border.color: 'white'
-                //anchors.horizontalCenter: parent.horizontalCenter
                 anchors.left: parent.left
-
+                visible: app.descargando
                 color: {
                     if (mediaPlayer.playbackState === MediaPlayer.PlayingState) {
                         return "red";
@@ -362,7 +361,7 @@ Window {
                         } else if (mediaPlayer.mediaStatus === MediaPlayer.LoadedMedia  && !app.descargando) {
                             return "Preparado: %100";
                         } else {
-                            return "Descargando %"+progressBar.value;
+                            return "Descargando %"+progressContainer.porcentaje;
                         }
                     }
                     color: {
@@ -661,6 +660,12 @@ Window {
                 wrapMode: Text.WordWrap
                 font.pixelSize: app.fs*2
                 anchors.centerIn: parent
+            }
+            Button{
+                text: "Cerrar"
+                anchors.right: parent.right
+                anchors.bottom: parent.bottom
+                onClicked: xLog.visible=false
             }
         }
     }
