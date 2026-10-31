@@ -29,7 +29,12 @@ Window {
     Connections{
         target: qmlErrorLogger
         onMessagesChanged:{
-            log.text+=''+qmlErrorLogger.messages[qmlErrorLogger.messages.length-1]+'<br>'
+            let msg=qmlErrorLogger.messages[qmlErrorLogger.messages.length-1]
+            if(msg.indexOf('Coul not')){
+                log.text+='-->Fallo al cargar: '+msg+'<br>'
+            }else{
+                log.text+=''+msg+'<br>'
+            }
             xLog.visible=true
         }
     }
@@ -324,6 +329,20 @@ Window {
                         if(del){
 
                             let item=app.json.items[lvAudios.currentIndex]
+                            let m0=item.url.split('/')
+                            app.playingFromCache=1
+                            progressBar.visible=true
+                            unikObj.uFileNameDownloaded=m0[m0.length-1]
+                            let descargado=unikObj.downloadGitHubZip(item.url, m0[m0.length-1]);
+                            if(descargado){
+                                mediaPlayer.source='file://'+unikObj.getPath(2)+'/'+m0[m0.length-1]
+                            }else{
+                                log.text+='Ha fallado la descarga del audio: '+item.url+'\n'
+                                xLog.visible=true
+                                return
+                            }
+                            mediaPlayer.play()
+
                             log.text+='Archivo eliminado: '+fp+'\n'
                             log.text+='Descargar : '+item.url+'\n'
                             xLog.visible=true
