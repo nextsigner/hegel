@@ -120,24 +120,6 @@ Window {
                             }
                         }
         }
-        Button{
-            text: "Recargar"
-            onClicked: {
-                let fp=(""+mediaPlayer.source).replace('file:', '')
-                let fe=unikObj.fileExist(fp)
-                let del=false
-                if(fe){
-                    del=unikObj.deleteFile(fp)
-                }
-                if(del){
-
-                    let item=app.json.items[index]
-                    log.text+='Archivo eliminado: '+fp+'\n'
-                    log.text+='Descargar : '+item.url+'\n'
-                    xLog.visible=true
-                }
-            }
-        }
         Rectangle{
             width: app.fs*6
             height: width
@@ -329,6 +311,24 @@ Window {
                     wrapMode: Text.WordWrap
                     horizontalAlignment: Text.AlignHCenter
                     anchors.centerIn: parent
+                }
+                Button{
+                    text: "Recargar"
+                    onClicked: {
+                        let fp=(""+mediaPlayer.source).replace('file:', '')
+                        let fe=unikObj.fileExist(fp)
+                        let del=false
+                        if(fe){
+                            del=unikObj.deleteFile(fp)
+                        }
+                        if(del){
+
+                            let item=app.json.items[index]
+                            log.text+='Archivo eliminado: '+fp+'\n'
+                            log.text+='Descargar : '+item.url+'\n'
+                            xLog.visible=true
+                        }
+                    }
                 }
             }
             Rectangle {
