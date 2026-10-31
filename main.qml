@@ -334,7 +334,6 @@ Window {
                 border.width: 1
                 border.color: 'white'
                 anchors.left: parent.left
-                visible: app.descargando
                 color: {
                     if (mediaPlayer.playbackState === MediaPlayer.PlayingState) {
                         return "red";
@@ -429,8 +428,9 @@ Window {
                 from: 0
                 to: 1
                 value: 0
-                visible: app.playingFromCache===1
-                Rectangle{
+                visible: app.descargando
+                //visible: app.playingFromCache===1
+                /*Rectangle{
                     color: 'transparent'
                     border.width: 2
                     border.color: apps.fontColor
@@ -448,7 +448,7 @@ Window {
                             z: parent.z-1
                         }
                     }
-                }
+                }*/
             }
             // --- ListView Horizontal Inferior ---
             ListView {
