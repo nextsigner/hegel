@@ -259,7 +259,7 @@ Item{
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_3_p1.wav"
         item.tit="Enrique Pedro Mesa\nHEGEL (3.1/3.3)/3"
-        item.des="Del Libro la Fenomenología del Espítitu"
+        item.des="Del Libro la Fenomenología del Espítitu. La Autoconsciencia. Dialéctica del amo y el esclavo. La consciencia infeliz."
         marcs=[]
 
         marc={}
@@ -276,14 +276,20 @@ Item{
 
         marc={}
         marc.titulo="El ESPÍRITU SUBJETIVO"
-        marc.des="Es el Desarrollo de la CONSCIENCIA/AUTOCONSCIENCIA del individuo sobre SÍ MISMO."
+        marc.des="Es el Desarrollo de la CONSCIENCIA/AUTOCONSCIENCIA del individuo sobre SÍ MISMO. Va de lo FÄCTICO a las RELACIONES. Descubrir que HAY OTRAS CONSCIENCIAS."
         marc.ms=getHmsToMs(0, 5, 55)
         marcs.push(marc)
 
         marc={}
-        marc.titulo="El ESPÍRITU OBJETIVO"
-        marc.des=""
-        marc.ms=getHmsToMs(0, 5, 55)
+        marc.titulo="LA DIALÉCTICA DEL AMO Y EL ESCLAVO"
+        marc.des="Yo tengo autoconsciencia pero ellos también se reconocen con autoconsciencia. Lucha por el RECONOCIMIENTO."
+        marc.ms=getHmsToMs(0, 14, 32)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="LA CONSCIENCIA INFELIZ"
+        marc.des="Si niego la consciencia de los otros, la convierto en objeto y pierdo reconocimiento de los otros."
+        marc.ms=getHmsToMs(0, 15, 45)
         marcs.push(marc)
 
         item.marcs=marcs
@@ -300,6 +306,48 @@ Item{
         marc.titulo="Parte 2 del video 3"
         marc.des="Continúa la clase 3"
         marc.ms=getHmsToMs(0, 0, 0)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="LA RAZÓN"
+        marc.des="La CIENCIA es la explicación matemática de la realidad."
+        marc.ms=getHmsToMs(0, 0, 0)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="EL ESTADO"
+        marc.des="El Estado es aquello que hace que se una el YO con el USTEDES. Ruptura entre el YO y el NOSOTROS por superación pasa a un YO Y NOSOTROS."
+        marc.ms=getHmsToMs(0, 1, 32)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="El Espítiritu OBJETIVO (ALIENACIÓN)"
+        marc.des="Las instituciones. El espíritu sale de sí al mundo para realizarse. LA ALIENACIÓN."
+        marc.ms=getHmsToMs(0, 4, 27)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="LA EPICIDAD"
+        marc.des="La epicidad sería el ESTADO y el DERECHO. Aquí ya no corre el YO, corre el NOSOTROS."
+        marc.ms=getHmsToMs(0, 6, 19)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="LA CULTURA"
+        marc.des="El Espíritu Extrañado (NO RARO, SALIDO HACIA AFUERA). Es un Espíritu que se presenta FUERA DE SÍ."
+        marc.ms=getHmsToMs(0, 9, 48)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="LA MORALIDAD"
+        marc.des="La moral que va más allá del Alma Bella que no entiende que la moralidad es un proceso de EXTRAÑAMIENTO. Contrario a la moralidad subjetiva y egocéntrica."
+        marc.ms=getHmsToMs(0, 12, 39)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="EL ESPÏRITU ABSOLUTO"
+        marc.des="Es cuando surge ya el REENCUENTRO CONSIGO MISMO DEL ESPÍRITU ABSOLUTO."
+        marc.ms=getHmsToMs(0, 15, 33)
         marcs.push(marc)
 
         item.marcs=marcs
