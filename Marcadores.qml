@@ -357,13 +357,37 @@ Item{
         item={}
         item.url="https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_3_p3.wav"
         item.tit="Enrique Pedro Mesa\nHEGEL (3.3/3.3)/3"
-        item.des=""
+        item.des="El ARTE, la RELIGIÓN y la FILOSOFÍA."
         marcs=[]
 
         marc={}
-        marc.titulo="Parte 3 del video 3"
-        marc.des="Finaliza la clase 3"
+        marc.titulo="El Reencuentro del Espíritu Absoluto"
+        marc.des="Es a traves del arte, la religión y la filosofía."
         marc.ms=getHmsToMs(0, 0, 0)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="EL ARTE"
+        marc.des="El arte está limitado por su representación sensorial."
+        marc.ms=getHmsToMs(0, 1, 20)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="LA RELIGIÓN"
+        marc.des="La religión está limitado por su carácter NO CONCEPTUAL. Tiene una VERDAD NO REPRESENTATIVA. Hay que CREER o CREER. Asunto de FÉ."
+        marc.ms=getHmsToMs(0, 4, 50)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo="LA FILOSOFÍA"
+        marc.des="La filosofía es pura actividad discursiva y conceptual."
+        marc.ms=getHmsToMs(0, 7, 0)
+        marcs.push(marc)
+
+        marc={}
+        marc.titulo=""
+        marc.des=""
+        marc.ms=getHmsToMs(0, 1, 20)
         marcs.push(marc)
 
         item.marcs=marcs
