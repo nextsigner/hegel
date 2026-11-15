@@ -82,7 +82,7 @@ Item{
 
         marc={}
         marc.titulo="SUPERACIÓN DE LOS PRINCIPIOS"
-        marc.des="LOS PRINCIPIOS DE IDENTIDAD Y LOS PRINCIPIOS DE NO SUPERACIÓN."
+        marc.des="SUPERACIÓN DE LOS PRINCIPIOS DE IDENTIDAD Y LOS PRINCIPIOS DE NO CONTRADICCIÓN."
         marc.ms=getHmsToMs(0, 15, 30)
         marcs.push(marc)
 
