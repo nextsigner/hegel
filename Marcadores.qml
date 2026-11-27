@@ -201,8 +201,8 @@ Item{
         //Item 6
         addItem(
                     "https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_2_p3.wav",
-                    item.tit="Enrique Pedro Mesa\nHEGEL (2.3/2.3)/3",
-                    item.des="Resumen general de los explicado en el video divulgativo 2 sobre Hegel."
+                    "Enrique Pedro Mesa\nHEGEL (2.3/2.3)/3",
+                    "Resumen general de los explicado en el video divulgativo 2 sobre Hegel."
                     )
 
         addMarc(
