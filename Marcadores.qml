@@ -242,7 +242,7 @@ Item{
                     "Yo tengo autoconsciencia pero ellos también se reconocen con autoconsciencia. Lucha por el RECONOCIMIENTO.",
                     getHmsToMs(0, 14, 32)
                     )
-        marcs.push(marc)
+
 
         addMarc(
                     "LA CONSCIENCIA INFELIZ",
@@ -271,7 +271,7 @@ Item{
                     "El Estado es aquello que hace que se una el YO con el USTEDES. Ruptura entre el YO y el NOSOTROS por superación pasa a un YO Y NOSOTROS.",
                     getHmsToMs(0, 1, 32)
                     )
-        marcs.push(marc)
+
 
         addMarc(
                     "El Espítiritu OBJETIVO (ALIENACIÓN)",
@@ -314,7 +314,7 @@ Item{
                     "El arte está limitado por su representación sensorial.",
                     getHmsToMs(0, 1, 20)
                     )
-        marcs.push(marc)
+
 
         addMarc(
                     "LA RELIGIÓN",
@@ -333,7 +333,7 @@ Item{
                     "La superación de toda contradicción y el final del despliegue del Espíritu Absoluto.",
                     getHmsToMs(0, 9, 8)
                     )
-        marcs.push(marc)
+
 
         addMarc(
                     "RESUMEN FINAL SOBRE HEGEL",
