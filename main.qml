@@ -669,7 +669,7 @@ Window {
             }
         }
     }
-    Marcadores{id: marcadores}
+    Marcadores{}
     Component.onCompleted: {
         /*let j={}
         j.items=[]
@@ -817,7 +817,6 @@ Window {
         }
     }
     function loadData(index){
-        return
         lm.clear()
         let item=app.json.items[index]
         let m0=item.url.split('/')
