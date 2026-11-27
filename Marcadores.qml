@@ -353,13 +353,13 @@ Item{
         item.des=des
         r.j.items.push(item)
     }
-    function addMarc(tit, des, aHMSInicio, aHMSFin){
+    function addMarc(tit, des, ms){
         let index=r.j.items.length-1
         let marc={}
         marc.titulo=tit
         marc.des=des
-        marc.ms=getHmsToMs(aHMSInicio[0], aHMSInicio[1], aHMSInicio[2])
-        marc.msf=getHmsToMs(aHMSFin[0], aHMSFin[1], aHMSFin[2])
+        marc.ms=ms//getHmsToMs(aHMSInicio[0], aHMSInicio[1], aHMSInicio[2])
+        //marc.msf=getHmsToMs(aHMSFin[0], aHMSFin[1], aHMSFin[2])
         if(!r.j.items[index].marcs){
             r.j.items[index].marcs=[]
         }
