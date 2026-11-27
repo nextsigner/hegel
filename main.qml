@@ -669,7 +669,7 @@ Window {
             }
         }
     }
-    Marcadores{}
+    Marcadores{id: marcadores}
     Component.onCompleted: {
         /*let j={}
         j.items=[]
