@@ -1,1 +1,1 @@
-Se optimiza Marcadores.qml. Prueba 6
+Se optimiza Marcadores.qml. Prueba 7
