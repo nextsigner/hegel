@@ -219,8 +219,8 @@ Item{
         //Item 7
         addItem(
                     "https://github.com/nextsigner/hegel/releases/download/filosof%C3%ADa/hegel_3_p1.wav",
-                    item.tit="Enrique Pedro Mesa\nHEGEL (3.1/3.3)/3",
-                    item.des="Del Libro la Fenomenología del Espítitu. La Autoconsciencia. Dialéctica del amo y el esclavo. La consciencia infeliz."
+                    "Enrique Pedro Mesa\nHEGEL (3.1/3.3)/3",
+                    "Del Libro la Fenomenología del Espítitu. La Autoconsciencia. Dialéctica del amo y el esclavo. La consciencia infeliz."
                     )
         addMarc(
                     "Introducción al video 3",
