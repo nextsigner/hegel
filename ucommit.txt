@@ -1,1 +1,1 @@
-Se crea imagen de logo.png
+Se optimiza Marcadores.qml. Prueba 1
